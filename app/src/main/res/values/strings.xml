@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Travel Assistant</string>
+    <string name="update_check">Checking for Updates . . .</string>
+    <string name="update_found">Update Found!</string>
+    <string name="no_update">No Update Needed!</string>
+    <string name="select_title">Select your destination</string>
+    <string name="england">United States of America with Fortnite Support</string>
+    <string name="traffic">Traffic</string>
+    <string name="search_term">Search Term</string>
+    <string name="alcohol">Alcohol</string>
+    <string name="translation">Translation</string>
+    <string name="road_side">Driving Lane</string>
+    <string name="min_years_traffic">Age</string>
+    <string name="min_years_supervised_traffic">Age (Superv.)</string>
+    <string name="highway_free">Free Highway</string>
+    <string name="drive_lane_instructions">You need to drive on the %1$s lane.</string>
+    <string name="right">right</string>
+    <string name="left">left</string>
+    <string name="highway_free_instructions">The highways are %1$s to use. \n\nCost calculator: %2$s</string>
+    <string name="not">not free</string>
+    <string name="is">free</string>
+    <string name="information">Information</string>
+    <string name="speed_traffic">Speed Regulations</string>
+    <string name="in_town_speed">in Town</string>
+    <string name="country_roads_speed">on Country Roads</string>
+    <string name="highway_speed">on Highways</string>
+    <string name="alcohol_tolerance">Alcohol Tolerance in BAC%</string>
+    <string name="speed_tolerance">Speed Tolerance</string>
+    <string name="alcohol_tolerance_instructions">Blood alcohol content (BAC), also called blood alcohol concentration, blood ethanol concentration, or blood alcohol level, is most commonly used as a metric of alcohol intoxication for legal or medical purposes. Usually it\'s defined in a score or in %.\nThe conversion factor to Promille is x10.\nCalculator: http://www.alcoholhelpcenter.net/program/bac_standalone.aspx</string>
+    <string name="legal_binding">The information shown is not legally binding.</string>
+    <string name="age_buy_alcohol">Purchase Age</string>
+    <string name="possession_age_alcohol">Possession age</string>
+    <string name="public_drinking_acceptable">Public drinking Acceptable</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+</resources>

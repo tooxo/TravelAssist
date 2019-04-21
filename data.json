@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "countries":[
+    {
+      "name":"France",
+      "last_updated":0,
+      "language": "fr",
+      "country": "FR",
+      "traffic":{
+        "min_age_supervision":15,
+        "min_age":18,
+        "road_side":"right",
+        "speed_in_town":50,
+        "speed_single_lane":80,
+        "speed_highway":110,
+        "speed_tolerance_in_percent":5,
+        "highway_free":false,
+        "alcohol_tolerance_in_bac_percent": 0.05,
+        "alcohol_tolerance_in_promille": 0.5,
+        "calculator":"http:\/\/www.autoroutes.fr\/index.htm?lang=en"
+      },
+      "alcohol":{
+        "min_possession_age":0,
+        "min_buying_age":18,
+        "public_drinking_acceptable": 2,
+        "public_additional": "",
+        "steps_of_buying":{
+          "18":0
+        },
+        "steps_of_possession":{
+          "0":3
+        }
+      },
+      "translation":{
+        "basics":{
+          "hello":"Bonjour",
+          "goodbye":"Au revoir",
+          "please":"S'il vous plaît",
+          "yes":"Oui",
+          "no":"Non",
+          "excuse_me":"Excusez-moi",
+          "sorry":"Pardon",
+          "thanks":"Merci beaucoup",
+          "you_speak_english":"parlez-vous anglais?"
+        },
+        "restaurant":{
+          "menu_please":"Le menu s’il vous plaît",
+          "bill":"L’addition s’il vous plaît."
+        }
+      }
+    },
+    {
+      "name":"Germany",
+      "last_updated":0
+    },
+    {
+      "name":"England",
+      "last_updated":0
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+Traffic:
+https://en.wikipedia.org/wiki/List_of_countries_by_minimum_driving_age
+https://en.wikipedia.org/wiki/Speed_limits_by_country
+https://www.tolls.eu
+
+Alcohol:
+https://en.wikipedia.org/wiki/Legal_drinking_age
+
+Basic Translation:
+French: https://www.fluentin3months.com/french-phrases-for-travel/
+
+
+Alcohol Classes:
+0 - Everything
+1 - Beer / Wine
+2 - High percentage
+3 - Everything, but private
+
+Public Alcohol Classes:
+0 - Not acceptable
+1 - Totally Acceptable
+2 - partwise Acceptable
+
+https://www.flaticon.com/packs/rectangular-country-simple-flags
+https://www.flaticon.com/packs/public-transportation-10
+https://www.flaticon.com/free-icon/wine-bottle_1200973#term=Alcohol&page=1&position=40
+https://www.flaticon.com/free-icon/translator_309206#term=Translation&page=1&position=48
+https://www.flaticon.com/free-icon/restart_148772#term=Back&page=1&position=14
+https://www.flaticon.com/free-icon/work-tools_453603
+https://fontawesome.com/icons/thumbs-up?style=regular
+https://fontawesome.com/icons/thumbs-down?style=regular
