@@ -1,4 +1,5 @@
 package com.tschulte.travelassistant;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,12 +14,13 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class TrafficDetails extends AppCompatActivity {
 
-    void popup(String message, Context ctx){
+    void popup(String message, Context ctx) {
 
         final SpannableString s = new SpannableString(message);
         Linkify.addLinks(s, Linkify.ALL);
@@ -28,24 +30,25 @@ public class TrafficDetails extends AppCompatActivity {
                 .setMessage(s)
                 .create();
         d.show();
-        ((TextView)d.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
-        ((TextView)d.findViewById(android.R.id.message)).setClickable(true);
+        ((TextView) d.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
+        ((TextView) d.findViewById(android.R.id.message)).setClickable(true);
 
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(0,0);
-    }
-    @Override
-    public void onPause(){
-        super.onPause();
-        overridePendingTransition(0,0);
+        overridePendingTransition(0, 0);
     }
 
     @Override
-    public void onCreate(Bundle bundle){
+    public void onPause() {
+        super.onPause();
+        overridePendingTransition(0, 0);
+    }
+
+    @Override
+    public void onCreate(Bundle bundle) {
         this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(bundle);
         this.setContentView(R.layout.traffic);
@@ -64,9 +67,9 @@ public class TrafficDetails extends AppCompatActivity {
             TextView super_age = this.findViewById(R.id.min_supervised_traffic);
             super_age.setText(traffic.get("min_age_supervision").toString());
             ImageView lane = findViewById(R.id.road_side);
-            if (traffic.get("road_side").toString().equals("right")){
+            if (traffic.get("road_side").toString().equals("right")) {
                 lane.setImageResource(R.drawable.right_lane);
-            }else{
+            } else {
                 lane.setImageResource(R.drawable.left_lane);
             }
             LinearLayout ll = findViewById(R.id.lane_ll);
@@ -76,7 +79,7 @@ public class TrafficDetails extends AppCompatActivity {
                     try {
                         String string = getResources().getString(R.string.drive_lane_instructions, traffic.getString("road_side"));
                         popup(string, context);
-                    }catch (JSONException js){
+                    } catch (JSONException js) {
                         js.printStackTrace();
                     }
 
@@ -84,11 +87,11 @@ public class TrafficDetails extends AppCompatActivity {
             });
             ImageView highway = this.findViewById(R.id.highway_cost_traffic);
             final int yesno;
-            if (traffic.getBoolean("highway_free")){
+            if (traffic.getBoolean("highway_free")) {
                 highway.setImageResource(R.drawable.thumb_up);
-                highway.setColorFilter(Color.rgb(0,255,0));
+                highway.setColorFilter(Color.rgb(0, 255, 0));
                 yesno = getResources().getIdentifier("is", "string", getPackageName());
-            }else{
+            } else {
                 highway.setImageResource(R.drawable.thumb_down);
                 highway.setColorFilter(Color.rgb(255, 0, 0));
                 yesno = getResources().getIdentifier("not", "string", getPackageName());
@@ -109,16 +112,19 @@ public class TrafficDetails extends AppCompatActivity {
             highwayspeed.setText(traffic.getString("speed_highway"));
             TextView speedTolerance = findViewById(R.id.speed_tolerance);
             speedTolerance.setText(traffic.getString("speed_tolerance_in_percent") + "%");
+
+            //TODO: ALCOHOL TOLERANCE UNITS
+
             TextView alcoholTolerance = findViewById(R.id.alcohol_tolerance);
-            alcoholTolerance.setText(traffic.getString("alcohol_tolerance_in_bac_percent")+"%");
+            alcoholTolerance.setText(traffic.getString("alcohol_tolerance_in_bac_percent") + "%");
             LinearLayout alcoholToleranceLayout = findViewById(R.id.alcohol_tolerance_ll);
             alcoholToleranceLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    popup(getResources().getString(R.string.alcohol_tolerance_instructions),context);
+                    popup(getResources().getString(R.string.alcohol_tolerance_instructions), context);
                 }
             });
-        }catch (JSONException js){
+        } catch (JSONException js) {
             js.printStackTrace();
         }
     }

@@ -24,13 +24,14 @@
     <string name="in_town_speed">in Town</string>
     <string name="country_roads_speed">on Country Roads</string>
     <string name="highway_speed">on Highways</string>
-    <string name="alcohol_tolerance">Alcohol Tolerance in BAC%</string>
+    <string name="alcohol_tolerance">Alcohol Tolerance while driving</string>
     <string name="speed_tolerance">Speed Tolerance</string>
-    <string name="alcohol_tolerance_instructions">Blood alcohol content (BAC), also called blood alcohol concentration, blood ethanol concentration, or blood alcohol level, is most commonly used as a metric of alcohol intoxication for legal or medical purposes. Usually it\'s defined in a score or in %.\nThe conversion factor to Promille is x10.\nCalculator: http://www.alcoholhelpcenter.net/program/bac_standalone.aspx</string>
+    <string name="alcohol_tolerance_instructions">Blood alcohol content (BAC), also called blood alcohol concentration, blood ethanol concentration, or blood alcohol level, is most commonly used as a metric of alcohol intoxication for legal or medical purposes. It\'s stated in permille.</string>
     <string name="legal_binding">The information shown is not legally binding.</string>
     <string name="age_buy_alcohol">Purchase Age</string>
     <string name="possession_age_alcohol">Possession age</string>
     <string name="public_drinking_acceptable">Public drinking Acceptable</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
+    <string name="pronunciation">Click for pronunciation.</string>
 </resources>

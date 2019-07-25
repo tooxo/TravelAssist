@@ -12,6 +12,20 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class AlcoholDetails extends AppCompatActivity {
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(0, 0);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        overridePendingTransition(0, 0);
+    }
+
     @Override
     public void onCreate(Bundle bundle){
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);

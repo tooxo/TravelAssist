@@ -1,0 +1,483 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "version",
+    "countries"
+  ],
+  "properties": {
+    "version": {
+      "$id": "#/properties/version",
+      "type": "integer",
+      "title": "The Version Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "countries": {
+      "$id": "#/properties/countries",
+      "type": "array",
+      "title": "The Countries Schema",
+      "items": {
+        "$id": "#/properties/countries/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "name",
+          "last_updated",
+          "language",
+          "country",
+          "traffic",
+          "alcohol",
+          "translation"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/properties/countries/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "France"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "last_updated": {
+            "$id": "#/properties/countries/items/properties/last_updated",
+            "type": "integer",
+            "title": "The Last_updated Schema",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "language": {
+            "$id": "#/properties/countries/items/properties/language",
+            "type": "string",
+            "title": "The Language Schema",
+            "default": "",
+            "examples": [
+              "fr"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "country": {
+            "$id": "#/properties/countries/items/properties/country",
+            "type": "string",
+            "title": "The Country Schema",
+            "default": "",
+            "examples": [
+              "FR"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "traffic": {
+            "$id": "#/properties/countries/items/properties/traffic",
+            "type": "object",
+            "title": "The Traffic Schema",
+            "required": [
+              "min_age_supervision",
+              "min_age",
+              "road_side",
+              "speed_in_town",
+              "speed_single_lane",
+              "speed_highway",
+              "speed_tolerance_in_percent",
+              "highway_free",
+              "alcohol_tolerance_in_bac_percent",
+              "alcohol_tolerance_in_promille",
+              "calculator"
+            ],
+            "properties": {
+              "min_age_supervision": {
+                "$id": "#/properties/countries/items/properties/traffic/properties/min_age_supervision",
+                "type": "integer",
+                "title": "The Min_age_supervision Schema",
+                "description": "Min age required to drive under parental supervision",
+                "default": 0,
+                "examples": [
+                  15
+                ]
+              },
+              "min_age": {
+                "$id": "#/properties/countries/items/properties/traffic/properties/min_age",
+                "type": "integer",
+                "title": "The Min_age Schema",
+                "description": "Min age required to drive on your own without supervision",
+                "default": 0,
+                "examples": [
+                  18
+                ]
+              },
+              "road_side": {
+                "$id": "#/properties/countries/items/properties/traffic/properties/road_side",
+                "type": "string",
+                "title": "The Road_side Schema",
+                "default": "",
+                "examples": [
+                  "right",
+                  "left"
+                ],
+                "pattern": "(left|right)"
+              },
+              "speed_in_town": {
+                "$id": "#/properties/countries/items/properties/traffic/properties/speed_in_town",
+                "type": "integer",
+                "title": "The Speed_in_town Schema",
+                "source": "https://en.wikipedia.org/wiki/Speed_limits_by_country",
+                "default": 0,
+                "examples": [
+                  50
+                ]
+              },
+              "speed_single_lane": {
+                "$id": "#/properties/countries/items/properties/traffic/properties/speed_single_lane",
+                "type": "integer",
+                "title": "The Speed_single_lane Schema",
+                "source": "https://en.wikipedia.org/wiki/Speed_limits_by_country",
+                "default": 0,
+                "examples": [
+                  80
+                ]
+              },
+              "speed_highway": {
+                "$id": "#/properties/countries/items/properties/traffic/properties/speed_highway",
+                "type": "integer",
+                "title": "The Speed_highway Schema",
+                "source": "https://en.wikipedia.org/wiki/Speed_limits_by_country",
+                "default": 0,
+                "examples": [
+                  110
+                ]
+              },
+              "speed_tolerance_in_percent": {
+                "$id": "#/properties/countries/items/properties/traffic/properties/speed_tolerance_in_percent",
+                "type": "integer",
+                "title": "The Speed_tolerance_in_percent Schema",
+                "source": "https://en.wikipedia.org/wiki/Speed_limits_by_country",
+                "default": 0,
+                "examples": [
+                  5
+                ]
+              },
+              "highway_free": {
+                "$id": "#/properties/countries/items/properties/traffic/properties/highway_free",
+                "type": "boolean",
+                "title": "The Highway_free Schema",
+                "source": "https://tolls.eu",
+                "default": false,
+                "examples": [
+                  false,
+                  true
+                ]
+              },
+              "alcohol_tolerance_in_bac_percent": {
+                "$id": "#/properties/countries/items/properties/traffic/properties/alcohol_tolerance_in_bac_percent",
+                "type": "number",
+                "title": "The Alcohol_tolerance_in_bac_percent Schema",
+                "source": "https://autotraveler.ru/en/spravka/alcohol-driving-limits-in-europe.html",
+                "default": 0.0,
+                "examples": [
+                  0.05
+                ]
+              },
+              "alcohol_tolerance_in_promille": {
+                "$id": "#/properties/countries/items/properties/traffic/properties/alcohol_tolerance_in_promille",
+                "type": "number",
+                "title": "The Alcohol_tolerance_in_promille Schema",
+                "source": "https://autotraveler.ru/en/spravka/alcohol-driving-limits-in-europe.html",
+                "default": 0.0,
+                "examples": [
+                  0.5
+                ]
+              },
+              "calculator": {
+                "$id": "#/properties/countries/items/properties/traffic/properties/calculator",
+                "type": "string",
+                "title": "The Calculator Schema",
+                "default": "",
+                "examples": [
+                  "http://www.autoroutes.fr/index.htm?lang=en"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "alcohol": {
+            "$id": "#/properties/countries/items/properties/alcohol",
+            "type": "object",
+            "title": "The Alcohol Schema",
+            "required": [
+              "min_possession_age",
+              "min_buying_age",
+              "public_drinking_acceptable",
+              "public_additional",
+              "steps_of_buying",
+              "steps_of_possession"
+            ],
+            "properties": {
+              "min_possession_age": {
+                "$id": "#/properties/countries/items/properties/alcohol/properties/min_possession_age",
+                "type": "integer",
+                "title": "The Min_possession_age Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "min_buying_age": {
+                "$id": "#/properties/countries/items/properties/alcohol/properties/min_buying_age",
+                "type": "integer",
+                "title": "The Min_buying_age Schema",
+                "default": 0,
+                "examples": [
+                  18
+                ]
+              },
+              "public_drinking_acceptable": {
+                "$id": "#/properties/countries/items/properties/alcohol/properties/public_drinking_acceptable",
+                "type": "integer",
+                "title": "The Public_drinking_acceptable Schema",
+                "source": "0 - Not acceptable    1 - Totally Acceptable    2 - partwise Acceptable",
+                "default": 0,
+                "examples": [
+                  0,
+                  1,
+                  2
+                ]
+              },
+              "public_additional": {
+                "$id": "#/properties/countries/items/properties/alcohol/properties/public_additional",
+                "type": "string",
+                "title": "The Public_additional Schema",
+                "default": "",
+                "examples": [
+                  ""
+                ],
+                "pattern": "^(.*)$"
+              },
+              "steps_of_buying": {
+                "$id": "#/properties/countries/items/properties/alcohol/properties/steps_of_buying",
+                "type": "object",
+                "title": "The Steps_of_buying Schema",
+                "description": "0 - Everything    1 - Beer / Wine    2 - High percentage    3 - Everything, but private",
+                "required": [
+                  "x"
+                ],
+                "properties": {
+                  "x": {
+                    "$id": "#/properties/countries/items/properties/alcohol/properties/steps_of_buying/properties/x",
+                    "type": "integer",
+                    "title": "The x Schema",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  },
+                  "y": {
+                    "$id": "#/properties/countries/items/properties/alcohol/properties/steps_of_buying/properties/y",
+                    "type": "integer",
+                    "title": "The y Schema",
+                    "default": 0,
+                    "examples": [
+                      0,
+                      1,
+                      2,
+                      3
+                    ]
+                  }
+                }
+              },
+              "steps_of_possession": {
+                "$id": "#/properties/countries/items/properties/alcohol/properties/steps_of_possession",
+                "type": "object",
+                "title": "The Steps_of_possession Schema",
+                "description": "0 - Everything    1 - Beer / Wine    2 - High percentage    3 - Everything, but private",
+                "required": [
+                  "x"
+                ],
+                "properties": {
+                  "x": {
+                    "$id": "#/properties/countries/items/properties/alcohol/properties/steps_of_possession/properties/x",
+                    "type": "integer",
+                    "title": "The x Schema",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  },
+                  "y": {
+                    "$id": "#/properties/countries/items/properties/alcohol/properties/steps_of_possession/properties/y",
+                    "type": "integer",
+                    "title": "The y Schema",
+                    "default": 0,
+                    "examples": [
+                      0,
+                      1,
+                      2,
+                      3
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "translation": {
+            "$id": "#/properties/countries/items/properties/translation",
+            "type": "object",
+            "title": "The Translation Schema",
+            "required": [
+              "basics",
+              "restaurant"
+            ],
+            "properties": {
+              "basics": {
+                "$id": "#/properties/countries/items/properties/translation/properties/basics",
+                "type": "object",
+                "title": "The Basics Schema",
+                "required": [
+                  "hello",
+                  "goodbye",
+                  "please",
+                  "yes",
+                  "no",
+                  "excuse_me",
+                  "sorry",
+                  "thanks",
+                  "you_speak_english"
+                ],
+                "properties": {
+                  "hello": {
+                    "$id": "#/properties/countries/items/properties/translation/properties/basics/properties/hello",
+                    "type": "string",
+                    "title": "The Hello Schema",
+                    "default": "",
+                    "examples": [
+                      "Bonjour"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "goodbye": {
+                    "$id": "#/properties/countries/items/properties/translation/properties/basics/properties/goodbye",
+                    "type": "string",
+                    "title": "The Goodbye Schema",
+                    "default": "",
+                    "examples": [
+                      "Au revoir"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "please": {
+                    "$id": "#/properties/countries/items/properties/translation/properties/basics/properties/please",
+                    "type": "string",
+                    "title": "The Please Schema",
+                    "default": "",
+                    "examples": [
+                      "S'il vous plaît"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "yes": {
+                    "$id": "#/properties/countries/items/properties/translation/properties/basics/properties/yes",
+                    "type": "string",
+                    "title": "The Yes Schema",
+                    "default": "",
+                    "examples": [
+                      "Oui"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "no": {
+                    "$id": "#/properties/countries/items/properties/translation/properties/basics/properties/no",
+                    "type": "string",
+                    "title": "The No Schema",
+                    "default": "",
+                    "examples": [
+                      "Non"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "excuse_me": {
+                    "$id": "#/properties/countries/items/properties/translation/properties/basics/properties/excuse_me",
+                    "type": "string",
+                    "title": "The Excuse_me Schema",
+                    "default": "",
+                    "examples": [
+                      "Excusez-moi"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "sorry": {
+                    "$id": "#/properties/countries/items/properties/translation/properties/basics/properties/sorry",
+                    "type": "string",
+                    "title": "The Sorry Schema",
+                    "default": "",
+                    "examples": [
+                      "Pardon"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "thanks": {
+                    "$id": "#/properties/countries/items/properties/translation/properties/basics/properties/thanks",
+                    "type": "string",
+                    "title": "The Thanks Schema",
+                    "default": "",
+                    "examples": [
+                      "Merci beaucoup"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "you_speak_english": {
+                    "$id": "#/properties/countries/items/properties/translation/properties/basics/properties/you_speak_english",
+                    "type": "string",
+                    "title": "The You_speak_english Schema",
+                    "default": "",
+                    "examples": [
+                      "parlez-vous anglais?"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                }
+              },
+              "restaurant": {
+                "$id": "#/properties/countries/items/properties/translation/properties/restaurant",
+                "type": "object",
+                "title": "The Restaurant Schema",
+                "required": [
+                  "menu_please",
+                  "bill"
+                ],
+                "properties": {
+                  "menu_please": {
+                    "$id": "#/properties/countries/items/properties/translation/properties/restaurant/properties/menu_please",
+                    "type": "string",
+                    "title": "The Menu_please Schema",
+                    "default": "",
+                    "examples": [
+                      "Le menu s’il vous plaît"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "bill": {
+                    "$id": "#/properties/countries/items/properties/translation/properties/restaurant/properties/bill",
+                    "type": "string",
+                    "title": "The Bill Schema",
+                    "default": "",
+                    "examples": [
+                      "L’addition s’il vous plaît."
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

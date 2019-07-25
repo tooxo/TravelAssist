@@ -3,28 +3,25 @@ package com.tschulte.travelassistant;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class DetailsActivity extends AppCompatActivity {
 
-    public void startTraffic(JSONObject json){
+    public void startTraffic(JSONObject json) {
         Bundle bundle = new Bundle();
         bundle.putString("JSON", json.toString());
-        Log.v("Traffic", "Im here");
         Intent i = new Intent(this, TrafficDetails.class);
         i.putExtras(bundle);
         i.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(i);
     }
 
-    public void startAlcohol(JSONObject json){
+    public void startAlcohol(JSONObject json) {
         Bundle bundle = new Bundle();
         bundle.putString("JSON", json.toString());
         Intent i = new Intent(DetailsActivity.this, AlcoholDetails.class);
@@ -32,7 +29,7 @@ public class DetailsActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void startTranslation(JSONObject json){
+    public void startTranslation(JSONObject json) {
         Bundle bundle = new Bundle();
         bundle.putString("JSON", json.toString());
         Intent i = new Intent(DetailsActivity.this, TranslationDetails.class);
@@ -41,7 +38,7 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onCreate(Bundle bundle){
+    public void onCreate(Bundle bundle) {
         this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(bundle);
         Bundle b = getIntent().getExtras();
@@ -78,7 +75,7 @@ public class DetailsActivity extends AppCompatActivity {
                 }
             });
 
-        }catch (JSONException | NullPointerException js){
+        } catch (JSONException | NullPointerException js) {
             js.printStackTrace();
         }
 
