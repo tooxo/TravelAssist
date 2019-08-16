@@ -1,11 +1,13 @@
 package com.tschulte.travelassistant;
+
 import android.content.Context;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.TypedValue;
-import android.widget.TextView;
 
-public class FontFitTextView extends TextView {
+import androidx.appcompat.widget.AppCompatTextView;
+
+public class FontFitTextView extends AppCompatTextView {
 
     public FontFitTextView(Context context) {
         super(context);
@@ -26,8 +28,7 @@ public class FontFitTextView extends TextView {
     /* Re size the font so the specified text fits in the text box
      * assuming the text box is the specified width.
      */
-    private void refitText(String text, int textWidth)
-    {
+    private void refitText(String text, int textWidth) {
         if (textWidth <= 0)
             return;
         int targetWidth = textWidth - this.getPaddingLeft() - this.getPaddingRight();
@@ -37,10 +38,10 @@ public class FontFitTextView extends TextView {
 
         mTestPaint.set(this.getPaint());
 
-        while((hi - lo) > threshold) {
-            float size = (hi+lo)/2;
+        while ((hi - lo) > threshold) {
+            float size = (hi + lo) / 2;
             mTestPaint.setTextSize(size);
-            if(mTestPaint.measureText(text) >= targetWidth)
+            if (mTestPaint.measureText(text) >= targetWidth)
                 hi = size; // too big
             else
                 lo = size; // too small
@@ -50,8 +51,7 @@ public class FontFitTextView extends TextView {
     }
 
     @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
-    {
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int parentWidth = MeasureSpec.getSize(widthMeasureSpec);
         int height = getMeasuredHeight();
@@ -65,7 +65,7 @@ public class FontFitTextView extends TextView {
     }
 
     @Override
-    protected void onSizeChanged (int w, int h, int oldw, int oldh) {
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         if (w != oldw) {
             refitText(this.getText().toString(), w);
         }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="between_margin_main">5dp</dimen>
+    <dimen name="big_margin_main">20dp</dimen>
+
+</resources>

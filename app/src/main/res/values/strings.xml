@@ -4,7 +4,7 @@
     <string name="update_found">Update Found!</string>
     <string name="no_update">No Update Needed!</string>
     <string name="select_title">Select your destination</string>
-    <string name="england">United States of America with Fortnite Support</string>
+    <string name="england" translatable="false">United States of America with Fortnite Support</string>
     <string name="traffic">Traffic</string>
     <string name="search_term">Search Term</string>
     <string name="alcohol">Alcohol</string>
@@ -26,12 +26,15 @@
     <string name="highway_speed">on Highways</string>
     <string name="alcohol_tolerance">Alcohol Tolerance while driving</string>
     <string name="speed_tolerance">Speed Tolerance</string>
-    <string name="alcohol_tolerance_instructions">Blood alcohol content (BAC), also called blood alcohol concentration, blood ethanol concentration, or blood alcohol level, is most commonly used as a metric of alcohol intoxication for legal or medical purposes. It\'s stated in permille.</string>
+    <string name="alcohol_tolerance_instructions" translatable="false">Blood alcohol content (BAC), also called blood alcohol concentration, blood ethanol concentration, or blood alcohol level, is most commonly used as a metric of alcohol intoxication for legal or medical purposes. It\'s stated in permille.</string>
     <string name="legal_binding">The information shown is not legally binding.</string>
     <string name="age_buy_alcohol">Purchase Age</string>
     <string name="possession_age_alcohol">Possession age</string>
     <string name="public_drinking_acceptable">Public drinking Acceptable</string>
     <string name="no">No</string>
-    <string name="yes">Yes</string>
     <string name="pronunciation">Click for pronunciation.</string>
+    <string name="settings">Settings</string>
+    <string name="owncountrysetting">List your own country for selection</string>
+    <string name="yes">yes</string>
+    <string name="sources">Sources / Licenses</string>
 </resources>

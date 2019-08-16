@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Hell" parent="Theme.AppCompat.Light">
+        <item name="primaryTextColor">@color/gray</item>
+        <item name="backgroundColor">@color/white</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="editTextStyle">
+            @style/editTextThemeLight
+        </item>
+        <item name="detailRound">
+            @drawable/rounded_text
+        </item>
+        <item name="buttonDetail">
+            @drawable/button_detail
+        </item>
+    </style>
+
+    <style name="Theme.Dunkel" parent="Theme.AppCompat.Light">
+        <item name="primaryTextColor">@color/lightgray</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="backgroundColor">@color/darkgrey</item>
+        <item name="editTextStyle">
+            @style/editTextThemeDark
+        </item>
+        <item name="detailRound">
+            @drawable/rounded_text_dark
+        </item>
+        <item name="buttonDetail">
+            @drawable/button_detail_dark
+        </item>
+    </style>
+
+    <style name="editTextThemeLight">
+        <item name="android:colorControlNormal">@color/gray</item>
+        <item name="android:colorControlActivated">@color/black</item>
+        <item name="android:textColorHint">@color/gray</item>
+    </style>
+
+    <style name="editTextThemeDark">
+        <item name="android:colorControlNormal">@color/lightgray</item>
+        <item name="android:colorControlActivated">@color/white</item>
+        <item name="android:textColorHint">@color/lightgray</item>
+    </style>
+
+
+</resources>

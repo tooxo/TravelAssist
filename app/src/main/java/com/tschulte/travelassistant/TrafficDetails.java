@@ -1,22 +1,28 @@
 package com.tschulte.travelassistant;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import android.preference.PreferenceManager;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import static com.tschulte.travelassistant.MainActivity.SETTING_DARK_MODE;
+import static com.tschulte.travelassistant.MainActivity.themeAttributeToColor;
 
 public class TrafficDetails extends AppCompatActivity {
 
@@ -44,21 +50,27 @@ public class TrafficDetails extends AppCompatActivity {
     @Override
     public void onPause() {
         super.onPause();
-        overridePendingTransition(0, 0);
     }
 
     @Override
     public void onCreate(Bundle bundle) {
         this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(bundle);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (prefs.getBoolean(SETTING_DARK_MODE, false)) {
+            setTheme(R.style.Theme_Dunkel);
+        } else {
+            setTheme(R.style.Theme_Hell);
+        }
+        this.getWindow().setStatusBarColor(themeAttributeToColor(R.attr.colorPrimary, this, getResources().getColor(R.color.colorPrimary)));
+
         this.setContentView(R.layout.traffic);
         ImageView imageView = this.findViewById(R.id.banner_traffic);
         Bundle extras = getIntent().getExtras();
-        String jsonString = extras.getString("JSON");
+        String jsonString = extras.getString(MainActivity.JSON);
         try {
             Context context = this;
             JSONObject js = new JSONObject(jsonString);
-            Log.v("String", js.toString());
             JSONObject traffic = (JSONObject) js.get("traffic");
             int id = getResources().getIdentifier(js.getString("name").toLowerCase() + "_square", "drawable", getPackageName());
             imageView.setImageResource(id);
@@ -67,22 +79,20 @@ public class TrafficDetails extends AppCompatActivity {
             TextView super_age = this.findViewById(R.id.min_supervised_traffic);
             super_age.setText(traffic.get("min_age_supervision").toString());
             ImageView lane = findViewById(R.id.road_side);
+            String laneSide;
             if (traffic.get("road_side").toString().equals("right")) {
                 lane.setImageResource(R.drawable.right_lane);
+                laneSide = getResources().getString(R.string.right);
             } else {
                 lane.setImageResource(R.drawable.left_lane);
+                laneSide = getResources().getString(R.string.left);
             }
             LinearLayout ll = findViewById(R.id.lane_ll);
             ll.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    try {
-                        String string = getResources().getString(R.string.drive_lane_instructions, traffic.getString("road_side"));
-                        popup(string, context);
-                    } catch (JSONException js) {
-                        js.printStackTrace();
-                    }
-
+                    String string = getResources().getString(R.string.drive_lane_instructions, laneSide);
+                    popup(string, context);
                 }
             });
             ImageView highway = this.findViewById(R.id.highway_cost_traffic);
@@ -116,7 +126,7 @@ public class TrafficDetails extends AppCompatActivity {
             //TODO: ALCOHOL TOLERANCE UNITS
 
             TextView alcoholTolerance = findViewById(R.id.alcohol_tolerance);
-            alcoholTolerance.setText(traffic.getString("alcohol_tolerance_in_bac_percent") + "%");
+            alcoholTolerance.setText(traffic.getString("alcohol_tolerance_in_promille") + "%");
             LinearLayout alcoholToleranceLayout = findViewById(R.id.alcohol_tolerance_ll);
             alcoholToleranceLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -127,5 +137,39 @@ public class TrafficDetails extends AppCompatActivity {
         } catch (JSONException js) {
             js.printStackTrace();
         }
+
+
+        ScrollView scrollViewTraffic = findViewById(R.id.scrollViewTraffic);
+        scrollViewTraffic.setOnTouchListener(new OnSwipeTouchListener(TrafficDetails.this) {
+            @Override
+            public void onSwipeRight() {
+                finish();
+                TrafficDetails.this.overridePendingTransition(0, R.anim.slide_out);
+                super.onSwipeRight();
+            }
+
+            @Override
+            public void onSwipeLeft() {
+                finish();
+                TrafficDetails.this.overridePendingTransition(0, R.anim.slide_out_reverse);
+                super.onSwipeLeft();
+            }
+
+            @Override
+            public void onSwipeUp() {
+                // finish();
+                // TrafficDetails.this.overridePendingTransition(0, R.anim.slide_up_weg);
+                super.onSwipeUp();
+            }
+
+            @Override
+            public void onSwipeDown() {
+                // finish();
+                // TrafficDetails.this.overridePendingTransition(0, R.anim.slide_out_down);
+                super.onSwipeDown();
+            }
+        });
+
+
     }
 }

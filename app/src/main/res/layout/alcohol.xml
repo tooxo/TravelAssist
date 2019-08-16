@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
+        android:id="@+id/scrollViewAlcohol"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="?attr/backgroundColor">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/banner_alcohol"
                     android:layout_width="match_parent"
@@ -22,6 +26,7 @@
                     android:adjustViewBounds="true"
                     android:scaleType="fitXY"
                     app:srcCompat="@drawable/albania_square" />
+
                 <com.tschulte.travelassistant.FontFitTextView
                     android:id="@+id/title_alcohol"
                     android:layout_width="match_parent"
@@ -29,10 +34,11 @@
                     android:layout_centerInParent="true"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_text"
+                    android:background="?attr/detailRound"
                     android:fontFamily="@font/lato_reg"
                     android:gravity="center"
                     android:text="@string/alcohol"
+                    android:textColor="?attr/primaryTextColor"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -57,6 +63,7 @@
                         android:fontFamily="@font/sans_bold"
                         android:text="18"
                         android:textAlignment="center"
+                        android:textColor="?attr/primaryTextColor"
                         android:textSize="95sp"
                         android:textStyle="bold" />
 
@@ -67,6 +74,7 @@
                         android:gravity="center|center_vertical"
                         android:text="@string/age_buy_alcohol"
                         android:textAlignment="center"
+                        android:textColor="?attr/primaryTextColor"
                         android:textSize="28sp" />
                 </LinearLayout>
 
@@ -85,6 +93,7 @@
                         android:fontFamily="@font/sans_bold"
                         android:text="0"
                         android:textAlignment="center"
+                        android:textColor="?attr/primaryTextColor"
                         android:textSize="95sp"
                         android:textStyle="bold" />
 
@@ -95,9 +104,11 @@
                         android:gravity="center|center_vertical"
                         android:text="@string/possession_age_alcohol"
                         android:textAlignment="center"
+                        android:textColor="?attr/primaryTextColor"
                         android:textSize="28sp" />
                 </LinearLayout>
             </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -105,34 +116,38 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="45dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/gray" />
+                android:background="?attr/primaryTextColor" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
-                android:orientation="horizontal"
-                android:weightSum="3"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp">
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:layout_gravity="center"
-                    android:gravity="center"
                     android:fontFamily="@font/sans_bold"
-                    android:text="@string/public_drinking_acceptable"/>
+                    android:gravity="center"
+                    android:text="@string/public_drinking_acceptable"
+                    android:textAlignment="center"
+                    android:textColor="?attr/primaryTextColor"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
                 <ImageView
-                    android:layout_width="0dp"
                     android:id="@+id/public_drinking_acceptable"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/speed"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
-                    android:gravity="center"/>
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:src="@drawable/speed" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

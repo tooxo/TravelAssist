@@ -2,6 +2,56 @@
   "version": 1,
   "countries": [
     {
+      "name": "England",
+      "last_updated": 0,
+      "language": "en",
+      "country": "GB",
+      "traffic": {
+        "min_age_supervision": 17,
+        "min_age": 17,
+        "road_side": "left",
+        "speed_in_town": 48,
+        "speed_single_lane": 97,
+        "speed_highway": 113,
+        "speed_tolerance_in_percent": 12,
+        "highway_free": true,
+        "alcohol_tolerance_in_bac_percent": 0.08,
+        "alcohol_tolerance_in_promille": 0.8,
+        "calculator": ""
+      },
+      "alcohol": {
+        "min_possession_age": 0,
+        "min_buying_age": 16,
+        "public_drinking_acceptable": 2,
+        "public_additional": "",
+        "steps_of_buying": {
+          "5": 3,
+          "16": 1,
+          "18": 0
+        },
+        "steps_of_possession": {
+          "0": 3
+        }
+      },
+      "translation": {
+        "basics": {
+          "hello": "Hello",
+          "goodbye": "Goodbye",
+          "please": "Please",
+          "yes": "Yes",
+          "no": "No",
+          "excuse_me": "Excuse Me",
+          "sorry": "Sorry",
+          "thanks": "Thank you",
+          "you_speak_english": ""
+        },
+        "restaurant": {
+          "menu_please": "Could I see the menu, please?",
+          "bill": "Could I have the bill, please?"
+        }
+      }
+    },
+    {
       "name": "France",
       "last_updated": 0,
       "language": "fr",
@@ -96,56 +146,6 @@
         "restaurant": {
           "menu_please": "Die Karte bitte",
           "bill": "Ich würde gerne zahlen."
-        }
-      }
-    },
-    {
-      "name": "England",
-      "last_updated": 0,
-      "language": "en",
-      "country": "GB",
-      "traffic": {
-        "min_age_supervision": 17,
-        "min_age": 17,
-        "road_side": "left",
-        "speed_in_town": 48,
-        "speed_single_lane": 97,
-        "speed_highway": 113,
-        "speed_tolerance_in_percent": 12,
-        "highway_free": true,
-        "alcohol_tolerance_in_bac_percent": 0.08,
-        "alcohol_tolerance_in_promille": 0.8,
-        "calculator": ""
-      },
-      "alcohol": {
-        "min_possession_age": 0,
-        "min_buying_age": 16,
-        "public_drinking_acceptable": 2,
-        "public_additional": "",
-        "steps_of_buying": {
-          "5": 3,
-          "16": 1,
-          "18": 0
-        },
-        "steps_of_possession": {
-          "0": 3
-        }
-      },
-      "translation": {
-        "basics": {
-          "hello": "Hello",
-          "goodbye": "Goodbye",
-          "please": "Please",
-          "yes": "Yes",
-          "no": "No",
-          "excuse_me": "Excuse Me",
-          "sorry": "Sorry",
-          "thanks": "Thank you",
-          "you_speak_english": ""
-        },
-        "restaurant": {
-          "menu_please": "Could I see the menu, please?",
-          "bill": "Could I have the bill, please?"
         }
       }
     }

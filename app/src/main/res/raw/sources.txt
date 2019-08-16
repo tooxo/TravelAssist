@@ -1,31 +1,38 @@
-Traffic:
+"List of countries by minimum driving age"
 https://en.wikipedia.org/wiki/List_of_countries_by_minimum_driving_age
-https://en.wikipedia.org/wiki/Speed_limits_by_country
-https://www.tolls.eu
-https://autotraveler.ru/en/spravka/alcohol-driving-limits-in-europe.html
-https://en.wikipedia.org/wiki/Legal_drinking_age#Europe
 
-Alcohol:
+"Speed limits by country"
+https://en.wikipedia.org/wiki/Speed_limits_by_country
+
+"Highway tolls in Europe"
+https://www.tolls.eu
+
+"Permissible driving alcohol level"
+https://autotraveler.ru/en/spravka/alcohol-driving-limits-in-europe.html
+
+"Legal drinking age"
 https://en.wikipedia.org/wiki/Legal_drinking_age
 
-Basic Translation:
-French: https://www.fluentin3months.com/french-phrases-for-travel/
+"25 Essential French Phrases for Travelers and Tourists"
+https://www.fluentin3months.com/french-phrases-for-travel/
 
-Alcohol Classes:
-0 - Everything
-1 - Beer / Wine
-2 - High percentage
-3 - Everything, but private
-
-Public Alcohol Classes:
-0 - Not acceptable
-1 - Totally Acceptable
-2 - partwise Acceptable
-
+"Rectangular country simple flags icon pack" made by "Freepik"
 https://www.flaticon.com/packs/rectangular-country-simple-flags
+
+"Public Transportation icon pack" made by "Freepik"
 https://www.flaticon.com/packs/public-transportation-10
+
+"Wine Bottle free icon" made by "Freepik"
 https://www.flaticon.com/free-icon/wine-bottle_1200973#term=Alcohol&page=1&position=40
+
+"Translator free icon" made by "Freepik"
 https://www.flaticon.com/free-icon/translator_309206#term=Translation&page=1&position=48
+
+"Work Tools free icon" made by "Freepik"
 https://www.flaticon.com/free-icon/work-tools_453603
+
+"thumbs-up"
 https://fontawesome.com/icons/thumbs-up?style=regular
+
+"thumbs-down"
 https://fontawesome.com/icons/thumbs-down?style=regular

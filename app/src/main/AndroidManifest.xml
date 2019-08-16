@@ -36,6 +36,12 @@
         <activity
             android:name=".TranslationDetails"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Sources"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"
